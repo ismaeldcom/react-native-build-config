@@ -7,7 +7,7 @@ Inspired from deprecated [luggit/react-native-build-config](https://github.com/l
 ## Install
 
 ```shell
-npm install --save react-native-build-config
+npm i ismaeldcom/react-native-build-config
 ```
 
 #### RN > 0.47 use 0.11 or higher
