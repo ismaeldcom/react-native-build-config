@@ -10,5 +10,9 @@ RCT_EXPORT_MODULE(RNBuildConfig)
     return [NSBundle mainBundle].infoDictionary;
 }
 
++ (BOOL)requiresMainQueueSetup {
+    return YES;
+}
+
 @end
   
