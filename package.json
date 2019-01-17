@@ -1,6 +1,6 @@
 {
   "name": "react-native-build-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Expose native build config to JS (android only for now)",
   "keywords": ["react-native", "android", "config", "env", "config-var"],
   "homepage": "https://github.com/ismaeldcom/react-native-build-config",
