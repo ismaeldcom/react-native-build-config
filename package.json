@@ -1,15 +1,10 @@
 {
   "name": "react-native-build-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Expose native build config to JS (android only for now)",
   "keywords": ["react-native", "android", "config", "env", "config-var"],
   "homepage": "https://github.com/ismaeldcom/react-native-build-config",
   "author": "Ismael Martín Alabarce <info@ismaeld.com>",
   "files": ["android/", "index.android.js", "index.ios.js"],
-  "license": "MIT",
-  "rnpm": {
-    "android": {
-      "packageInstance": "new RNBuildConfigPackage(BuildConfig.class)"
-    }
-  }
+  "license": "MIT"
 }
