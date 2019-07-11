@@ -1,8 +1,10 @@
-# React Native - Build config access from JS (android only for now)
+# React Native - Build config access from JS
 
 Module to expose build config variables set in Gradle to your javascript code in React Native.
 
 Inspired from deprecated [luggit/react-native-build-config](https://github.com/luggit/react-native-build-config).
+
+iOS version greatly contributed by [maddijoyce](https://github.com/maddijoyce)
 
 ## Install
 
@@ -16,44 +18,45 @@ npm i ismaeldcom/react-native-build-config
 
 ## Manually link
 
-1. Include this module in `android/settings.gradle`:
-  
-  ```
-  include ':react-native-build-config'
-  include ':app'
+1.  Include this module in `android/settings.gradle`:
 
-  project(':react-native-build-config').projectDir = new File(rootProject.projectDir,
-    '../node_modules/react-native-build-config/android')
-  ```
-2. Add a dependency to your app build in `android/app/build.gradle`:
-  
-  ```
-  dependencies {
-      ...
-      compile project(':react-native-build-config')
-  }
-  ```
-3. Change your main activity to add a new package, in `android/app/src/main/.../MainActivity.java`:
-  
-  ```java
-  import com.ismaeld.RNBuildConfig.RNBuildConfigPackage; // add import
+```
+include ':react-native-build-config'
+include ':app'
+
+project(':react-native-build-config').projectDir = new File(rootProject.projectDir,
+  '../node_modules/react-native-build-config/android')
+```
+
+2.  Add a dependency to your app build in `android/app/build.gradle`:
+
+```
+dependencies {
+    ...
+    compile project(':react-native-build-config')
+}
+```
+
+3.  Change your main activity to add a new package, in `android/app/src/main/.../MainActivity.java`:
+
+```java
+import com.ismaeld.RNBuildConfig.RNBuildConfigPackage; // add import
 
 public class MainApplication extends Application implements ReactApplication {
 
-    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
 
-        /* ... */
+      /* ... */
 
-        @Override
-        protected List<ReactPackage> getPackages() {
-            return Arrays.<ReactPackage>asList(
-                    new MainReactPackage(),
-                    new RNBuildConfigPackage(BuildConfig.class), // add the package here
-            );
-        }
-    };
-  ```
-
+      @Override
+      protected List<ReactPackage> getPackages() {
+          return Arrays.<ReactPackage>asList(
+                  new MainReactPackage(),
+                  new RNBuildConfigPackage(BuildConfig.class), // add the package here
+          );
+      }
+  };
+```
 
 ## Usage
 
@@ -67,12 +70,26 @@ android {
         ...
 ```
 
+Or declare them in your info.plist file in your ios project.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+  <key>API_URL</key>
+	<string>https://myapi.com</string>
+  <key>SHOW_ERRORS</key>
+  <true />
+  ...
+```
+
 Then access those from javascript:
 
 ```js
-const BuildConfig = require('react-native-build-config');
+const BuildConfig = require('react-native-build-config')
 
-BuildConfig.API_URL     // "https://myapi.com"
+BuildConfig.API_URL // "https://myapi.com"
 BuildConfig.SHOW_ERRORS // true
 ```
 
