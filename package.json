@@ -19,7 +19,8 @@
     "android/",
     "ios/",
     "lib/",
-    "react-native-build-config.podspec"
+    "react-native-build-config.podspec",
+    "react-native.config.js"
   ],
   "license": "MIT"
 }
