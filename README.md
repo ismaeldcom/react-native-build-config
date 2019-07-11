@@ -10,23 +10,9 @@ Inspired from deprecated [luggit/react-native-build-config](https://github.com/l
 npm i ismaeldcom/react-native-build-config
 ```
 
-#### RN > 0.47 use 0.11 or higher
+#### For React Native < 0.60 use version 0.1.0
 
-## Automatically link
-
-#### With React Native 0.27+
-
-```shell
-react-native link react-native-build-config
-```
-
-#### With older versions of React Native
-
-You need [`rnpm`](https://github.com/rnpm/rnpm) (`npm install -g rnpm`)
-
-```shell
-rnpm link react-native-device-info
-```
+## Native Modules are now Autolinked
 
 ## Manually link
 

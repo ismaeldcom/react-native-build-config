@@ -1,26 +1,25 @@
 {
   "name": "react-native-build-config",
-  "version": "0.0.2",
+  "version": "0.3.0",
   "description": "Expose native build config to JS",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "keywords": [
     "react-native",
     "android",
+    "ios",
     "config",
     "env",
-    "config-var"
+    "config-var",
+    "plist"
   ],
-  "repository": {
-    "url": "https://github.com/maddijoyce/react-native-build-config"
-  },
   "homepage": "https://github.com/ismaeldcom/react-native-build-config",
   "author": "Ismael Martín Alabarce <info@ismaeld.com>",
-  "license": "MIT",
   "files": [
     "android/",
     "ios/",
-    "lib",
+    "lib/",
     "react-native-build-config.podspec"
-  ]
+  ],
+  "license": "MIT"
 }
