@@ -16,5 +16,6 @@
   },
   "homepage": "https://github.com/ismaeldcom/react-native-build-config",
   "author": "Ismael Martín Alabarce <info@ismaeld.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": ["android/", "ios/", "lib"]
 }
