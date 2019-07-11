@@ -15,6 +15,9 @@
   ],
   "homepage": "https://github.com/ismaeldcom/react-native-build-config",
   "author": "Ismael Martín Alabarce <info@ismaeld.com>",
+  "contributors": [
+    "Maddi Joyce <maddi@maddijoyce.com>"
+  ],
   "files": [
     "android/",
     "ios/",
@@ -22,5 +25,11 @@
     "react-native-build-config.podspec",
     "react-native.config.js"
   ],
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
   "license": "MIT"
 }
