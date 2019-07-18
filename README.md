@@ -9,7 +9,7 @@ iOS version greatly contributed by [maddijoyce](https://github.com/maddijoyce)
 ## Install
 
 ```shell
-npm i ismaeldcom/react-native-build-config
+npm i react-native-build-config
 ```
 
 #### For React Native < 0.60 use version 0.1.0
