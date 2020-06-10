@@ -54,6 +54,19 @@ Gradle sets some variables by default:
 - `DEBUG`: set to `true` when running the app locally
 - `BUILD_TYPE` and `FLAVOR`: more build settings
 
+## ProGuard/R8
+
+ProGuard/R8 by default removes `BuildConfig` class from release Android build.
+JavaScript `BuildConfig` object will be `undefined`.
+
+To keep it add the following line to `proguard-rules.pro` file
+
+```
+-keep class **.BuildConfig { *; }
+```
+
+You can replace `**` with `your.package.name`.
+
 ## Linking on React Native < 0.60
 
 Native modules are auto-linked since v0.60. If you have a lower version, you need this:
