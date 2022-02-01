@@ -90,8 +90,22 @@ dependencies {
 }
 ```
 
-3.  Change your main activity to add a new package, in `android/app/src/main/.../MainActivity.java`:
+3.  Change your Application class to add a new package:
 
+    To find the application class, open the `AndroidManifest.xml` file and look into the `application` tag.
+```xml
+    <application
+        android:name=".MainApplication"  <=== This is the class
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+```
+
+Open the class and add the new package.
 ```java
 import com.ismaeld.RNBuildConfig.RNBuildConfigPackage; // add import
 
