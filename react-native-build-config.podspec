@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc   = true
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
 
   s.preserve_paths = 'README.md', 'package.json', 'lib/index.js'
   s.source_files   = 'ios/*.{h,m}'
